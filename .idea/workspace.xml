@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4bce017-6de4-443a-9358-e39d4cedf670" name="Changes" comment="add four file">
+    <list default="true" id="c4bce017-6de4-443a-9358-e39d4cedf670" name="Changes" comment="text file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textfile" beforeDir="false" afterPath="$PROJECT_DIR$/textfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -77,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732109834855</updated>
       <workItem from="1732109848825" duration="4545000" />
-      <workItem from="1732114483263" duration="3235000" />
+      <workItem from="1732114483263" duration="4104000" />
     </task>
     <task id="LOCAL-00001" summary="add four file">
       <option name="closed" value="true" />
@@ -87,7 +91,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732117520248</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add five file">
+      <option name="closed" value="true" />
+      <created>1732122448557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732122448557</updated>
+    </task>
+    <task id="LOCAL-00003" summary="text file">
+      <option name="closed" value="true" />
+      <created>1732122586514</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732122586514</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +153,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add four file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add four file" />
+    <MESSAGE value="add five file" />
+    <MESSAGE value="text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="text file" />
   </component>
 </project>
