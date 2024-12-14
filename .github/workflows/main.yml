@@ -1,15 +1,19 @@
 name: CI/CD PIPELINE
+
 on:
- push:
-  branches:
-   - main
-jobs: 
- build: 
-  name: Build Application
-  runs-on: ubuntu-latest
-  steps: 
-  
-   - uses: actions/checkout@v4
-  
-   - uses: actions/setup-python@v5
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v5
   
