@@ -1,4 +1,3 @@
-
 ---
 name: CI/CD PIPELINE
 on:
@@ -19,13 +18,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@4
       - name: installation de dependance pour controller la qualitè du code
         run: python first.py
   format:
     name: formattage du test
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: checkout code
         uses: actions/checkout@v4
@@ -34,7 +32,6 @@ jobs:
   Test:
     name: effectuer les test
     runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: checkout code
         uses: actions/checkout@v4
@@ -43,9 +40,46 @@ jobs:
   Audit:
     name: Effectuer les Audit
     runs-on: ubuntu-latest
-    needs: Test
     steps:
       - name: checkout code
         uses: actions/checkout@v4
       - name: Effectuer les Audits du Code Source
         run: python first.py
+  Documentation:
+    name: Documentation de l'application
+    runs-on: utbuntu-latest
+    needs:
+      - build
+      - Test
+    steps:
+      - name: checkout de code
+        uses: actions/checkout@v4
+      - name: Documenter l'application
+        run: python second.py
+  Package:
+    name: Effectuer le packagging de l'application
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout du code
+        uses: actions/checkout@v4
+      - name: Packagging de l'application
+        run: second.py
+    needs: Documentation
+  TestDePerformance:
+    name: Effectuer les Test de Performance
+    runs-on: ubuntu-latest
+    needs: Package
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: Effectuer les test de performance
+        run: second.py
+  Deployment:
+    name: Deployer l'Application
+    runs-on: ubuntu-latest
+    needs: TestDePerformance
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: Deployer en Production
+        run: second.py
