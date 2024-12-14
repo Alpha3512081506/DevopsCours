@@ -1,3 +1,4 @@
+
 ---
 name: CI/CD PIPELINE
 on:
@@ -25,19 +26,23 @@ jobs:
     name: formattage du test
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
       - name: Formattage des Text
         run: python first.py
   Test:
     name: effectuer les test
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code
+        uses: actions/checkout@v4
       - name: effectuer les test Unitaires
         run: python first.py
-  Audit: 
-   name: Effectuer les Audit
-   runs-on: ubuntu-latest
-   steps:
-    - name: Effectuer les Audits du Code Source
-      run: python first.py
-
-
+  Audit:
+    name: Effectuer les Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: Effectuer les Audits du Code Source
+        run: python first.py
