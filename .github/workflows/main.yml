@@ -1,0 +1,11 @@
+name: CI/CD PIPELINE
+on:
+ push
+jobs: 
+ build: 
+  name: Build Application
+  ruus-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+   - name: Installation python
+   - uses: actions/setup-python@v5
