@@ -1,19 +1,43 @@
+---
 name: CI/CD PIPELINE
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     name: Build Application
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout Code
         uses: actions/checkout@v4
-
       - name: Setup Python Environment
         uses: actions/setup-python@v5
-  
+  lint:
+    name: Verification de la qualite du code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@4
+      - name: installation de dependance pour controller la qualitè du code
+        run: python first.py
+  format:
+    name: formattage du test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Formattage des Text
+        run: python first.py
+  Test:
+    name: effectuer les test
+    runs-on: ubuntu-latest
+    steps:
+      - name: effectuer les test Unitaires
+        run: python first.py
+  Audit: 
+   name: Effectuer les Audit
+   runs-on: ubuntu-latest
+   steps:
+    - name: Effectuer les Audits du Code Source
+      run: python first.py
+
+
